@@ -108,89 +108,12 @@ function getLinearEquationRoot(a, b) {
  *   (0,-1) (1,0)    => π/2
  *   (0,1) (0,1)     => 0
  */
-function getAngleBetweenVectors(x1, y1, x2, y2, testResult) {
-  console.log('test_result: ', testResult);
-  console.log('x1:', x1, 'y1;', y1, 'x2:', x2, 'y2:', y2);
-  // const scalMutl = x1 * x2 + y1 * y2;
-  // console.log('scalMutl', scalMutl);
-  // if (scalMutl === 0) {
-  //   return 0;
-  // }
-  // const modX = Math.sqrt(x1 ** 2 + x2 ** 2);
-  // const modY = Math.sqrt(y1 ** 2 + y2 ** 2);
-  // console.log('modX', modX);
-  // console.log('modY', modY);
-  // if (scalMutl === 0) {
-  //   return 0;
-  // }
-  // const cos = scalMutl / (modX * modY);
-  // console.log('cos', cos);
-  // console.log('Math.acos(cos)', Math.acos(cos));
-  // console.log('Math.PI / 2', Math.PI / 2);
-  // console.log('atan2', Math.atan2(y1, x1));
-  // console.log('atan2', Math.atan2(y2, x2));
-  // console.log('atan2', Math.atan2(y2, x2) - Math.atan2(y1, x1));
-  // console.log('atan2', Math.atan2(0, 1));
-  console.log('x, y ', x1, y1);
-
+function getAngleBetweenVectors(x1, y1, x2, y2) {
   const at1 = Math.atan2(y1, x1);
-  console.log('at1', y1, x1, Math.atan2(y1, x1));
-  console.log('1 pointMath.atan2(y1, x1)', y1, x1, Math.atan2(y1, x1));
   const at2 = Math.atan2(y2, x2);
-  console.log('--');
-  console.log('');
 
-  console.log('at2', y2, x2, Math.atan2(y2, x2));
-  console.log('2 pointMath.atan2(y2, x2)', y2, x2, Math.atan2(y2, x2));
-
-  console.log('--');
-  console.log('');
-
-  console.log('at2', y2, x2, Math.atan2(y2, x2));
-  console.log('2 pointMath.atan2(y2, x2)', y2, x2, Math.atan2(y2, x2));
-
-  console.log('atan1', at1);
-  console.log('atan1', Math.atan2(1, 0));
-  console.log('atan2', at2);
-  console.log('atan1', Math.atan2(-1, 0));
-  const result = Math.abs(at2 - at1);
-  console.log('res', result);
-  // return Math.abs(at2 - at1);;
-  console.log('-------------------------');
-  console.log('Math.atan2(y1, x1)', Math.atan2(y1, x1));
-  console.log('Math.atan2(y1, x1)', Math.atan2(y2, x2));
-
-  console.log('test_result: ', testResult === result);
-  console.log('result', result, 'test :', testResult);
-  console.log('--------------------------');
-  console.log('--------------------------');
-  return result;
+  return Math.abs(at2 - at1);
 }
-
-// _test getAngleBetweenVectors(1, 0, 0, 1, Math.PI / 2);
-
-// console.log(
-//   'getAngleBetweenVectors(1, 0, 0, 1, Math.PI / 2): ',
-//   getAngleBetweenVectors(1, 0, 0, 1, Math.PI / 2)
-// );
-
-// _test getAngleBetweenVectors(0, 1, 0, -1, Math.PI);
-// console.log(
-//   'getAngleBetweenVectors(0, 1, 0, -1, Math.PI): ',
-//   getAngleBetweenVectors(0, 1, 0, -1, Math.PI / 2)
-// );
-
-// _test getAngleBetweenVectors(0, -1, 1, 0, Math.PI / 2);
-console.log(
-  'getAngleBetweenVectors(0, -1, 1, 0, Math.PI / 2): ',
-  getAngleBetweenVectors(0, -1, 1, 0, Math.PI / 2)
-);
-
-// _test getAngleBetweenVectors(0, 1, 0, 1, 0);
-// console.log(
-//   'getAngleBetweenVectors(0, -1, 1, 0, Math.PI / 2): ',
-//   getAngleBetweenVectors(0, 1, 0, 1, 0, 0)
-// );
 
 /**
  * Returns a last digit of a integer number.

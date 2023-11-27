@@ -130,6 +130,7 @@ describe('core-js-numbers', () => {
       // eslint-disable-next-line no-new-wrappers
       assert.equal(tasks.toNumber(new Number(42), 0), 42);
       assert.equal(tasks.toNumber(undefined, -1), -1);
+      // assert.equal(tasks.toNumber(null, 5), 5);
     }
   );
 
